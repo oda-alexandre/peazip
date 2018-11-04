@@ -1,23 +1,39 @@
-# **<center>PeaZip</center>**
+# PEAZIP
+
+![peazip](https://raw.githubusercontent.com/oda-alexandre/peazip/master/logo-peazip.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/peazip/master/logo-docker.png)
 
 
-**INTRODUCTION**
+## INDEX
 
-*peazip http://www.peazip.org/ via docker*
-
-
-**PREREQUIS**
-
-*Installer docker*
-
-
-**INSTALLATION**
-
-copier/coller dans un terminal :
-
-    docker run -d --name peazip -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/peazip -e DISPLAY --network none alexandreoda/peazip
+- [Build Docker](#BUILD)
+- [Introduction](#INTRODUCTION)
+- [Prerequis](#PREREQUIS)
+- [Installation](#INSTALLATION)
+- [License](#LICENSE)
 
 
-**LICENSE**
+## BUILD DOCKER
+
+[![peazip docker build](https://img.shields.io/docker/build/alexandreoda/peazip.svg)](https://hub.docker.com/r/alexandreoda/peazip)
+
+
+## INTRODUCTION
+
+Ce repository contient le fichier Dockerfile de [Peazip](http://www.peazip.org/) pour [Docker](https://www.docker.com), mis à jour automatiquement dans le [Docker Hub](https://hub.docker.com/r/alexandreoda/peazip/) public.
+
+
+## PREREQUIS
+
+Installer [Docker](https://www.docker.com)
+
+
+## INSTALLATION
+
+```
+docker run -d --name peazip -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/peazip -e DISPLAY --network none alexandreoda/peazip
+```
+
+
+## LICENSE
 
 [![GPLv3+](http://gplv3.fsf.org/gplv3-127x51.png)](https://github.com/oda-alexandre/peazip/blob/master/LICENSE)
