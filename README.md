@@ -1,6 +1,6 @@
 # PEAZIP
 
-![peazip](https://raw.githubusercontent.com/oda-alexandre/peazip/master/logo-peazip.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/peazip/master/logo-docker.png)
+![peazip](https://raw.githubusercontent.com/oda-alexandre/peazip/master/img/logo-peazip.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/peazip/master/img/logo-docker.png)
 
 
 ## INDEX
