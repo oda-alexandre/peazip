@@ -15,13 +15,17 @@ tar -zxvf peazip_portable-6.6.0.LINUX.x86_64.GTK2.tar.gz && \
 rm peazip_portable-6.6.0.LINUX.x86_64.GTK2.tar.gz && \
 chmod +x peazip_portable-6.6.0.LINUX.x86_64.GTK2/peazip
 
-RUN apt-get --purge autoremove -y \
-wget
-
 RUN useradd -d /home/peazip -m peazip && \
 passwd -d peazip && \
 adduser peazip sudo
 
 USER peazip
+
+RUN sudo apt-get --purge autoremove -y \
+wget && \
+sudo apt-get autoclean -y && \
+sudo rm /etc/apt/sources.list && \
+sudo rm -rf /var/cache/apt/archives/* && \
+sudo rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT peazip_portable-6.6.0.LINUX.x86_64.GTK2/peazip
