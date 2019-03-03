@@ -1,6 +1,6 @@
 # PEAZIP
 
-[![dockeri.co](https://dockeri.co/image/alexandreoda/atom)](https://hub.docker.com/r/alexandreoda/atom)
+[![dockeri.co](https://dockeri.co/image/alexandreoda/peazip)](https://hub.docker.com/r/alexandreoda/peazip)
 
 
 ## INDEX
@@ -14,10 +14,10 @@
 
 ## BADGES
 
-[![version](https://images.microbadger.com/badges/version/alexandreoda/atom.svg)](https://microbadger.com/images/alexandreoda/atom)
-[![size](https://images.microbadger.com/badges/image/alexandreoda/atom.svg)](https://microbadger.com/images/alexandreoda/atom")
-[![build](https://img.shields.io/docker/build/alexandreoda/atom.svg)](https://hub.docker.com/r/alexandreoda/atom)
-[![automated](https://img.shields.io/docker/automated/alexandreoda/atom.svg)](https://hub.docker.com/r/alexandreoda/atom)
+[![version](https://images.microbadger.com/badges/version/alexandreoda/peazip.svg)](https://microbadger.com/images/alexandreoda/peazip)
+[![size](https://images.microbadger.com/badges/image/alexandreoda/peazip.svg)](https://microbadger.com/images/alexandreoda/peazip")
+[![build](https://img.shields.io/docker/build/alexandreoda/peazip.svg)](https://hub.docker.com/r/alexandreoda/peazip)
+[![automated](https://img.shields.io/docker/automated/alexandreoda/peazip.svg)](https://hub.docker.com/r/alexandreoda/peazip)
 
 
 ## INTRODUCTION
@@ -26,7 +26,7 @@ Ce repository contient le fichier Dockerfile de
 
 - [Peazip](http://www.peazip.org/)
 
-Mis à jour automatiquement dans le [docker hub public](https://hub.docker.com/r/alexandreoda/peazip/).
+Mis à jour automatiquement dans le [docker hub public](https://hub.docker.com/r/alexandreoda/peazip).
 
 
 ## PREREQUIS
