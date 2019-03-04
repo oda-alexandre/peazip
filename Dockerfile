@@ -8,11 +8,11 @@ ENV VERSION 6.6.0
 
 # INSTALLATION DES PREREQUIS
 RUN apt-get update && apt-get install -y --no-install-recommends \
-wget \
 sudo \
+ca-certificates \
+wget \
 libgdk-pixbuf2.0-0 \
 libgtk-* \
-ca-certificates \
 x11-xserver-utils && \
 
 # AJOUT UTILISATEUR
@@ -27,10 +27,11 @@ USER ${USER}
 WORKDIR /home/${USER}
 
 # INSTALLATION DE L'APPLICATION
-RUN wget https://osdn.net/dl/peazip/peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz -O peazip.tar.gz && \
-tar -zxvf peazip.tar.gz && \
-rm peazip.tar.gz && \
-chmod +x peazip/peazip && \
+RUN wget https://osdn.net/dl/peazip/peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
+tar -zxvf peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
+rm peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
+chmod +x peazip_portable-${VERSION}.LINUX.x86_64.GTK2/peazip && \
+mv peazip_portable-${VERSION}.LINUX.x86_64.GTK2 peazip_portable && \
 
 # NETTOYAGE
 sudo apt-get --purge autoremove -y \
@@ -41,4 +42,4 @@ sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
 # COMMANDE AU DEMARRAGE DU CONTENEUR
-ENTRYPOINT peazip/peazip
+ENTRYPOINT peazip_portable/peazip
