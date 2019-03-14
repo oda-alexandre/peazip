@@ -31,7 +31,6 @@ RUN wget https://osdn.net/dl/peazip/peazip_portable-${VERSION}.LINUX.x86_64.GTK2
 tar -zxvf peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
 rm peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
 chmod +x peazip_portable-${VERSION}.LINUX.x86_64.GTK2/peazip && \
-mv peazip_portable-${VERSION}.LINUX.x86_64.GTK2 peazip_portable && \
 
 # NETTOYAGE
 sudo apt-get --purge autoremove -y \
@@ -42,4 +41,4 @@ sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
 # COMMANDE AU DEMARRAGE DU CONTENEUR
-ENTRYPOINT peazip_portable/peazip
+ENTRYPOINT peazip_portable-${VERSION}.LINUX.x86_64.GTK2/peazip
