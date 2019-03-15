@@ -6,7 +6,6 @@ MAINTAINER https://oda-alexandre.com
 ENV USER peazip
 ENV VERSION 6.6.0
 
-
 # INSTALLATION DES PREREQUIS
 RUN apt-get update && apt-get install -y --no-install-recommends \
 sudo \
