@@ -18,22 +18,19 @@ x11-xserver-utils && \
 # AJOUT UTILISATEUR
 useradd -d /home/${USER} -m ${USER} && \
 passwd -d ${USER} && \
-adduser ${USER} sudo
+adduser ${USER} sudo && \
+
+# INSTALLATION DE L'APPLICATION
+wget https://osdn.net/dl/peazip/peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
+tar -zxvf peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
+rm peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
+chmod +x peazip_portable-${VERSION}.LINUX.x86_64.GTK2/peazip
 
 # SELECTION UTILISATEUR
 USER ${USER}
 
-# SELECTION ESPACE DE TRAVAIL
-WORKDIR /home/${USER}
-
-# INSTALLATION DE L'APPLICATION
-RUN wget https://osdn.net/dl/peazip/peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
-tar -zxvf peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
-rm peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
-chmod +x peazip_portable-${VERSION}.LINUX.x86_64.GTK2/peazip && \
-
 # NETTOYAGE
-sudo apt-get --purge autoremove -y \
+RUN sudo apt-get --purge autoremove -y \
 wget && \
 sudo apt-get autoclean -y && \
 sudo rm /etc/apt/sources.list && \
