@@ -24,7 +24,8 @@ adduser ${USER} sudo && \
 wget https://osdn.net/dl/peazip/peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
 tar -zxvf peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
 rm peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
-chmod +x peazip_portable-${VERSION}.LINUX.x86_64.GTK2/peazip
+chmod +x peazip_portable-${VERSION}.LINUX.x86_64.GTK2/peazip && \
+chown -R peazip:peazip peazip_portable-${VERSION}.LINUX.x86_64.GTK2
 
 # SELECTION UTILISATEUR
 USER ${USER}
