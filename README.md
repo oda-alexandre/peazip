@@ -1,6 +1,6 @@
 # PEAZIP
 
-[![dockeri.co](https://dockeri.co/image/alexandreoda/peazip)](https://hub.docker.com/r/alexandreoda/peazip)
+<img src="https://pbs.twimg.com/profile_images/1709937425/PeaZip-logo_400x400.png" />
 
 
 ## INDEX
@@ -14,10 +14,7 @@
 
 ## BADGES
 
-[![version](https://images.microbadger.com/badges/version/alexandreoda/peazip.svg)](https://microbadger.com/images/alexandreoda/peazip)
-[![size](https://images.microbadger.com/badges/image/alexandreoda/peazip.svg)](https://microbadger.com/images/alexandreoda/peazip")
-[![build](https://img.shields.io/docker/build/alexandreoda/peazip.svg)](https://hub.docker.com/r/alexandreoda/peazip)
-[![automated](https://img.shields.io/docker/automated/alexandreoda/peazip.svg)](https://hub.docker.com/r/alexandreoda/peazip)
+[![pipeline status](https://gitlab.com/oda-alexandre/peazip/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/peazip/commits/master)
 
 
 ## INTRODUCTION
