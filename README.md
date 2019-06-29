@@ -23,7 +23,13 @@ Docker image of :
 
 - [Peazip](http://www.peazip.org/)
 
-Automatically updated on : [docker hub public](https://hub.docker.com/r/alexandreoda/peazip).
+Continuous integration on :
+
+- [gitlab](https://gitlab.com/oda-alexandre/peazip/pipelines)
+
+Automatically updated on :
+
+- [docker hub public](https://hub.docker.com/r/alexandreoda/peazip)
 
 
 ## PREREQUISITES
