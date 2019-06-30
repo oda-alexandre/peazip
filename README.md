@@ -1,6 +1,6 @@
 # PEAZIP
 
-<img src="https://pbs.twimg.com/profile_images/1709937425/PeaZip-logo_400x400.png" />
+<img src="https://pbs.twimg.com/profile_images/1709937425/PeaZip-logo_400x400.png" width="200" height="200"/>
 
 
 ## INDEX
