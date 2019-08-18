@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-LABEL authors="https://www.oda-alexandre.com/"
+LABEL authors https://www.oda-alexandre.com/
 
 ENV USER peazip
 ENV VERSION 6.6.0
