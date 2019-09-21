@@ -1,12 +1,12 @@
 FROM debian:stretch-slim
 
-MAINTAINER https://www.oda-alexandre.com/
+LABEL authors https://www.oda-alexandre.com/
 
 ENV USER peazip
 ENV VERSION 6.6.0
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
-apt-get update && apt-get install -y --no-install-recommends \
+apt update && apt install -y --no-install-recommends \
 sudo \
 ca-certificates \
 wget \
