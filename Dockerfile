@@ -13,13 +13,7 @@ RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   wget \
   libgdk-pixbuf2.0-0 \
   libgtk-* \
-  x11-xserver-utils \
-  && \
-  echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
-  apt-get --purge autoremove -y && \
-  apt-get autoclean -y && \
-  rm /etc/apt/sources.list && \
-  rm -rf /var/cache/apt/archives/* && \
+  x11-xserver-utils && \
   rm -rf /var/lib/apt/lists/*
 
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
@@ -29,11 +23,11 @@ RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
 
 RUN echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m' && \
   wget https://osdn.net/dl/peazip/peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
-  apt-get --purge autoremove -y wget && \
   tar -zxvf peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
   rm peazip_portable-${VERSION}.LINUX.x86_64.GTK2.tar.gz && \
   chmod +x peazip_portable-${VERSION}.LINUX.x86_64.GTK2/peazip && \
-  chown -R peazip:peazip peazip_portable-${VERSION}.LINUX.x86_64.GTK2
+  chown -R peazip:peazip peazip_portable-${VERSION}.LINUX.x86_64.GTK2 && \
+  apt-get --purge autoremove -y wget
 
 RUN echo -e '\033[36;1m ******* SELECT USER ******** \033[0m'
 USER ${USER}
