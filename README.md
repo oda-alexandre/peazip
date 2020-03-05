@@ -10,6 +10,8 @@
   - [INTRODUCTION](#introduction)
   - [PREREQUISITES](#prerequisites)
   - [INSTALL](#install)
+    - [DOCKER RUN](#docker-run)
+    - [DOCKER COMPOSE](#docker-compose)
   - [LICENSE](#license)
 
 ## BADGES
@@ -24,7 +26,7 @@ Docker image of :
 
 Continuous integration on :
 
-- [gitlab](https://gitlab.com/oda-alexandre/peazip/pipelines)
+- [gitlab pipelines](https://gitlab.com/oda-alexandre/peazip/pipelines)
 
 Automatically updated on :
 
@@ -36,7 +38,29 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
-```docker run -d --name peazip -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/peazip -e DISPLAY --network none alexandreoda/peazip```
+### DOCKER RUN
+
+```docker run -d --name peazip -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/peazip -e DISPLAY --network none alexandreoda/peazip
+```
+
+### DOCKER COMPOSE
+
+```yml
+version: "3.7"
+
+services:
+  peazip:
+    container_name: peazip
+    image: alexandreoda/peazip
+    restart: "no"
+    network_mode: none
+    privileged: false
+    environment:
+      - DISPLAY
+    volumes:
+      - "${HOME}:/home/peazip"
+      - "/tmp/.X11-unix/:/tmp/.X11-unix/"
+```
 
 ## LICENSE
 
