@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  peazip:
+    container_name: peazip
+    image: alexandreoda/peazip
+    restart: "no"
+    network_mode: none
+    privileged: false
+    environment:
+      - DISPLAY
+    volumes:
+      - "${HOME}:/home/peazip"
+      - "/tmp/.X11-unix/:/tmp/.X11-unix/"
