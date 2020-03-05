@@ -41,7 +41,13 @@ Use [docker](https://www.docker.com)
 ### DOCKER RUN
 
 ```\
-docker  run -d --name peazip -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/peazip -e DISPLAY --network none alexandreoda/peazip
+docker run -d \
+--name peazip \
+--network none \
+-e DISPLAY \
+-v /tmp/.X11-unix/:/tmp/.X11-unix/ \
+-v ${HOME}:/home/peazip \
+alexandreoda/peazip
 ```
 
 ### DOCKER COMPOSE
